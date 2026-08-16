@@ -8,10 +8,10 @@ const port = 8000;
 const frontendPort = 5173;
 const codespaceName = process.env.CODESPACE_NAME;
 const baseUrl = codespaceName
-  ? `https://${codespaceName}-${port}.app.github.dev`
+  ? `https://${codespaceName}-8000.app.github.dev`
   : `http://localhost:${port}`;
 const allowedOrigins = codespaceName
-  ? [`https://${codespaceName}-${frontendPort}.app.github.dev`]
+  ? [`https://${codespaceName}-5173.app.github.dev`]
   : [`http://localhost:${frontendPort}`];
 
 app.use(cors({ origin: allowedOrigins }));
