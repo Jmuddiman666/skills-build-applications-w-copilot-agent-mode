@@ -1,20 +1,26 @@
 import express from 'express';
 import { connectToDatabase } from './config/database.js';
+import apiRouter from './routes/index.js';
 
 const app = express();
 const port = 8000;
+const codespaceName = process.env.CODESPACE_NAME;
+const baseUrl = codespaceName
+  ? `https://${codespaceName}-${port}.app.github.dev`
+  : `http://localhost:${port}`;
 
 app.use(express.json());
+app.use('/api', apiRouter);
 
 app.get('/api/health', (_request, response) => {
-  response.json({ status: 'ok' });
+  response.json({ status: 'ok', apiUrl: baseUrl });
 });
 
 const startServer = async (): Promise<void> => {
   try {
     await connectToDatabase();
     app.listen(port, () => {
-      console.log(`OctoFit Tracker API listening on port ${port}`);
+      console.log(`OctoFit Tracker API listening at ${baseUrl}`);
     });
   } catch (error) {
     console.error('Failed to start OctoFit Tracker API:', error);
