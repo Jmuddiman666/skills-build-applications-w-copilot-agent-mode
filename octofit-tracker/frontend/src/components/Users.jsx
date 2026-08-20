@@ -1,5 +1,6 @@
 import ResourcePage from './ResourcePage.jsx'
 
+// API URL: https://<codespace>-8000.app.github.dev/api/users
 // Backend endpoint: /api/users/
 const RESOURCE = 'users'
 
