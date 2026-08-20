@@ -1,5 +1,8 @@
 import ResourcePage from './ResourcePage.jsx'
 
+// Backend endpoint: /api/workouts/
+const RESOURCE = 'workouts'
+
 const columns = [
   { key: 'title', label: 'Workout' },
   { key: 'category', label: 'Category' },
@@ -14,7 +17,7 @@ function Workouts() {
     <ResourcePage
       title="Workouts"
       description="Pick a session that matches today's time, focus, and intensity."
-      resource="workouts"
+      resource={RESOURCE}
       columns={columns}
     />
   )

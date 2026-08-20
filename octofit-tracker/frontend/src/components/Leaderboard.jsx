@@ -1,5 +1,8 @@
 import ResourcePage from './ResourcePage.jsx'
 
+// Backend endpoint: /api/leaderboard/
+const RESOURCE = 'leaderboard'
+
 const columns = [
   { key: 'rank', label: 'Rank', render: (value) => `#${value}` },
   { key: 'user', label: 'Athlete' },
@@ -14,7 +17,7 @@ function Leaderboard() {
     <ResourcePage
       title="Leaderboard"
       description="See who is setting the pace across every Octofit team."
-      resource="leaderboard"
+      resource={RESOURCE}
       columns={columns}
     />
   )

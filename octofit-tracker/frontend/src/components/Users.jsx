@@ -1,5 +1,8 @@
 import ResourcePage from './ResourcePage.jsx'
 
+// Backend endpoint: /api/users/
+const RESOURCE = 'users'
+
 const columns = [
   { key: 'displayName', label: 'Name' },
   { key: 'username', label: 'Username', render: (value) => `@${value}` },
@@ -13,7 +16,7 @@ function Users() {
     <ResourcePage
       title="Users"
       description="Athletes building sustainable habits with their teams."
-      resource="users"
+      resource={RESOURCE}
       columns={columns}
     />
   )

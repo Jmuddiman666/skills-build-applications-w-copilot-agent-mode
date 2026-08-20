@@ -1,5 +1,8 @@
 import ResourcePage from './ResourcePage.jsx'
 
+// Backend endpoint: /api/teams/
+const RESOURCE = 'teams'
+
 const columns = [
   { key: 'name', label: 'Team' },
   { key: 'mascot', label: 'Mascot' },
@@ -12,7 +15,7 @@ function Teams() {
     <ResourcePage
       title="Teams"
       description="Meet the crews training, competing, and improving together."
-      resource="teams"
+      resource={RESOURCE}
       columns={columns}
     />
   )
