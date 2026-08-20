@@ -1,5 +1,6 @@
 import ResourcePage from './ResourcePage.jsx'
 
+// API URL: https://<codespace>-8000.app.github.dev/api/workouts
 // Backend endpoint: /api/workouts/
 const RESOURCE = 'workouts'
 

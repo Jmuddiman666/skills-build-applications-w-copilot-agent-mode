@@ -1,5 +1,6 @@
 import ResourcePage from './ResourcePage.jsx'
 
+// API URL: https://<codespace>-8000.app.github.dev/api/teams
 // Backend endpoint: /api/teams/
 const RESOURCE = 'teams'
 
