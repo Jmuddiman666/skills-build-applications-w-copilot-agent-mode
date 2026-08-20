@@ -1,0 +1,30 @@
+:root {
+  color: #243c42;
+  background: #f4f7f3;
+  font-family: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(138, 175, 167, 0.1) 1px, transparent 1px),
+    #f4f7f3;
+  background-size: 100% 32px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
